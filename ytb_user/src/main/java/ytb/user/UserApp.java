@@ -1,11 +1,9 @@
-package ytb.manager;
+package ytb.user;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ImportResource;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import ytb.common.test.CorsConfig;
-
 
 /**
  * Package: PACKAGE_NAME
@@ -14,14 +12,10 @@ import ytb.common.test.CorsConfig;
  */
 @EnableSwagger2
 @SpringBootApplication
-@ImportResource({"classpath:AppContextCommon.xml"})
-public class ManagerApp {
+public class UserApp {
     public static void main(String[] args) {
+        SpringApplication.run(new Class[]
+                {CorsConfig.class,UserApp.class}, args);
 
-        SpringApplication.run(new Class[]{
-                CorsConfig.class,
-                ManagerApp.class
-
-        }, args);
     }
 }

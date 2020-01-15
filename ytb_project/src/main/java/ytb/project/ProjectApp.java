@@ -1,4 +1,5 @@
-package ytb.manager;
+package ytb.project;
+
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,16 +13,18 @@ import ytb.common.test.CorsConfig;
  * Author: ZCS
  * Date: Created in 2018/9/14 12:04
  */
+// "classpath:AppContextProject.xml",
+//.../actuator/beans
 @EnableSwagger2
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "ytb")
 @ImportResource({"classpath:AppContextCommon.xml"})
-public class ManagerApp {
+public class ProjectApp {
+
     public static void main(String[] args) {
+        SpringApplication.run(new Class[]{CorsConfig.class,
+                ProjectApp.class}, args);
 
-        SpringApplication.run(new Class[]{
-                CorsConfig.class,
-                ManagerApp.class
-
-        }, args);
     }
+
+
 }
