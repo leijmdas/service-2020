@@ -17,7 +17,7 @@ import ytb.common.test.CorsConfig;
 //.../actuator/beans
 @EnableSwagger2
 @SpringBootApplication(scanBasePackages = "ytb")
-@ImportResource({"classpath:AppContextCommon.xml"})
+@ImportResource({"classpath:AppContextProject.xml"})
 public class ProjectApp {
 
     public static void main(String[] args) {
