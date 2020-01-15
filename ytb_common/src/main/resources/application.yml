@@ -1,0 +1,18 @@
+server:
+    tomcat:
+        uri-encoding: UTF-8
+        max-threads: 100
+        min-spare-threads: 25
+    port: 80
+#    servlet:
+#        context-path: /hotel
+management:
+    security:
+        enables: false
+    server:
+      port: 81
+spring:
+    application:
+        name: ytb_common
+    main:
+        allow-bean-definition-overriding: true
