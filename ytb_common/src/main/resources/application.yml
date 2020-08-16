@@ -3,16 +3,29 @@ server:
         uri-encoding: UTF-8
         max-threads: 100
         min-spare-threads: 25
-    port: 80
+    port: 1880
 #    servlet:
 #        context-path: /hotel
 management:
     security:
         enables: false
     server:
-      port: 81
+      port: 1881
 spring:
     application:
         name: ytb_common
     main:
         allow-bean-definition-overriding: true
+    groovy:
+        template:
+            check-template-location: false
+
+    data:
+#        mongodb:
+#            host: 192.168.4.162
+#            port: 27017
+#            authentication-database: admin
+#            database: project
+#            username: root
+#            password: password
+#            #url: mongodb://root:password@192.168.4.162:27017/?authSource=admin"

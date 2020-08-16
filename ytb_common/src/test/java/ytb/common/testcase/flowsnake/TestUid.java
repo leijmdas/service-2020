@@ -1,7 +1,7 @@
 package ytb.common.testcase.flowsnake;
 
 import com.alibaba.fastjson.JSONObject;
-import com.baidu.fsg.uid.impl.DefaultUidGenerator;
+//import com.baidu.fsg.uid.impl.DefaultUidGenerator;
 import com.jtest.NodesFactroy.Inject.Inject;
 import com.jtest.NodesFactroy.Node.HttpClientNode;
 import com.jtest.annotation.JTest;
@@ -60,38 +60,38 @@ public class TestUid extends ITestYtb {
 	@JTestClass.step("post http://127.0.0.1/rest/service")
 	@JTestClass.exp("ok")
 	public void test0001_uid() {
-
-		 ApplicationContext ctxt = new ClassPathXmlApplicationContext
-				("classpath:/uid/default-uid-spring.xml");
-		ctxt = AppCtxtUtil.getApplicationContext();
-		DefaultUidGenerator uidGenerator=ctxt.getBean("defaultUidGenerator",DefaultUidGenerator.class);
-		System.out.println(uidGenerator.getUID());
-		System.out.println(uidGenerator.getUID());
-		System.out.println(uidGenerator.getUID());
-
-	}
-	@JTest
-	@JTestClass.title("e")
-	@JTestClass.pre("")
-	@JTestClass.step("post http://127.0.0.1/rest/service")
-	@JTestClass.exp("ok")
-	public void test0002_uid() {
-
-		ApplicationContext ctxt = new ClassPathXmlApplicationContext
-				("classpath:/uid/cached-uid-spring.xml");
-		ctxt = AppCtxtUtil.getApplicationContext();
-
-		DefaultUidGenerator uidGenerator = ctxt.getBean("defaultUidGenerator",
-				DefaultUidGenerator.class);
-		System.out.println(uidGenerator.getUID());
-		System.out.println(uidGenerator.getUID());
-		System.out.println(uidGenerator.getUID());
-		uidGenerator = ctxt.getBean("defaultUidGenerator",
-				DefaultUidGenerator.class);
-		System.out.println(uidGenerator.getUID());
-		System.out.println(uidGenerator.getUID());
+//
+//		 ApplicationContext ctxt = new ClassPathXmlApplicationContext
+//				("classpath:/uid/default-uid-spring.xml");
+//		ctxt = AppCtxtUtil.getApplicationContext();
+//		DefaultUidGenerator uidGenerator=ctxt.getBean("defaultUidGenerator",DefaultUidGenerator.class);
+//		System.out.println(uidGenerator.getUID());
+//		System.out.println(uidGenerator.getUID());
+//		System.out.println(uidGenerator.getUID());
 
 	}
+//	@JTest
+//	@JTestClass.title("e")
+//	@JTestClass.pre("")
+//	@JTestClass.step("post http://127.0.0.1/rest/service")
+//	@JTestClass.exp("ok")
+//	public void test0002_uid() {
+//
+//		ApplicationContext ctxt = new ClassPathXmlApplicationContext
+//				("classpath:/uid/cached-uid-spring.xml");
+//		ctxt = AppCtxtUtil.getApplicationContext();
+//
+//		DefaultUidGenerator uidGenerator = ctxt.getBean("defaultUidGenerator",
+//				DefaultUidGenerator.class);
+//		System.out.println(uidGenerator.getUID());
+//		System.out.println(uidGenerator.getUID());
+//		System.out.println(uidGenerator.getUID());
+//		uidGenerator = ctxt.getBean("defaultUidGenerator",
+//				DefaultUidGenerator.class);
+//		System.out.println(uidGenerator.getUID());
+//		System.out.println(uidGenerator.getUID());
+//
+//	}
 	@JTest
 	@JTestClass.title("e")
 	@JTestClass.pre("")

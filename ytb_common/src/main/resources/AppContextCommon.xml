@@ -50,9 +50,4 @@
         </property>
     </bean>
 
-    <!--<context:component-scan base-package="ytb.common"></context:component-scan>-->
-    <!--<bean name="student" class="ytb.common.test.demo.Student" scope="prototype">-->
-    <!--<property name="name" value="小黄"/>-->
-    <!--<property name="age" value="19"/>-->
-    <!--</bean>-->
 </beans>

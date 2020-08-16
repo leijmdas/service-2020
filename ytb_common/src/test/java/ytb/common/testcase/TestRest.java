@@ -2,7 +2,7 @@ package ytb.common.testcase;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.baidu.fsg.uid.impl.DefaultUidGenerator;
+//import com.baidu.fsg.uid.impl.DefaultUidGenerator;
 import com.jtest.NodesFactroy.Inject.Inject;
 import com.jtest.NodesFactroy.Node.HttpClientNode;
 import com.jtest.annotation.JTest;
@@ -25,7 +25,8 @@ public class TestRest extends ITestYtb {
 
 	@Inject(filename = "node.xml", value = "httpclient")
 	HttpClientNode httpclient;
-	
+	//private MongoTemplate mongoTemplate;
+
 	MsgRequest req = new MsgRequest();
 	String data;
 //	public void suiteSetUp() {
@@ -144,13 +145,13 @@ public class TestRest extends ITestYtb {
 	@JTestClass.exp("ok")
 	public void test0006_uid() {
 
-		 ApplicationContext ctxt = new ClassPathXmlApplicationContext
-				("classpath:/uid/default-uid-spring.xml");
-		ctxt = AppCtxtUtil.getApplicationContext();
-		DefaultUidGenerator uidGenerator=ctxt.getBean("defaultUidGenerator",DefaultUidGenerator.class);
-		System.out.println(uidGenerator.getUID());
-		System.out.println(uidGenerator.getUID());
-		System.out.println(uidGenerator.getUID());
+//		 ApplicationContext ctxt = new ClassPathXmlApplicationContext
+//				("classpath:/uid/default-uid-spring.xml");
+//		ctxt = AppCtxtUtil.getApplicationContext();
+//		DefaultUidGenerator uidGenerator=ctxt.getBean("defaultUidGenerator",DefaultUidGenerator.class);
+//		System.out.println(uidGenerator.getUID());
+//		System.out.println(uidGenerator.getUID());
+//		System.out.println(uidGenerator.getUID());
 
 	}
 	@JTest
@@ -163,16 +164,16 @@ public class TestRest extends ITestYtb {
 		ApplicationContext ctxt = new ClassPathXmlApplicationContext
 				("classpath:/uid/cached-uid-spring.xml");
 		ctxt = AppCtxtUtil.getApplicationContext();
-
-		DefaultUidGenerator uidGenerator = ctxt.getBean("defaultUidGenerator",
-				DefaultUidGenerator.class);
-		System.out.println(uidGenerator.getUID());
-		System.out.println(uidGenerator.getUID());
-		System.out.println(uidGenerator.getUID());
-		uidGenerator = ctxt.getBean("defaultUidGenerator",
-				DefaultUidGenerator.class);
-		System.out.println(uidGenerator.getUID());
-		System.out.println(uidGenerator.getUID());
+//
+//		DefaultUidGenerator uidGenerator = ctxt.getBean("defaultUidGenerator",
+//				DefaultUidGenerator.class);
+//		System.out.println(uidGenerator.getUID());
+//		System.out.println(uidGenerator.getUID());
+//		System.out.println(uidGenerator.getUID());
+//		uidGenerator = ctxt.getBean("defaultUidGenerator",
+//				DefaultUidGenerator.class);
+//		System.out.println(uidGenerator.getUID());
+//		System.out.println(uidGenerator.getUID());
 
 	}
 	@JTest

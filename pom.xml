@@ -92,11 +92,6 @@
             <version>1.4.199</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.zaxxer</groupId>
-            <artifactId>HikariCP</artifactId>
-            <version>3.3.1</version>
-        </dependency>
 
         <dependency>
             <groupId>JTest</groupId>
@@ -282,39 +277,6 @@
         </dependency>
 
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-groovy-templates</artifactId>
-            <version>${spring-boot.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-groovy-templates</artifactId>
-            <version>${spring-boot.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.codehaus.groovy</groupId>
-            <artifactId>groovy-all</artifactId>
-            <version>3.0.0-rc-2</version>
-            <type>pom</type>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-eclipse-compiler -->
-        <dependency>
-            <groupId>org.codehaus.groovy</groupId>
-            <artifactId>groovy-eclipse-compiler</artifactId>
-            <version>3.6.0-03</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.codehaus.groovy</groupId>
-            <artifactId>groovy-eclipse-batch</artifactId>
-            <version>2.5.8-03</version>
-        </dependency>
-
-
     </dependencies>
 
     <build>
@@ -344,22 +306,22 @@
                     <source>1.8</source>
                     <target>1.8</target>
                     <encoding>UTF-8</encoding>
-                    <compilerId>groovy-eclipse-compiler</compilerId>
+                    <!--<compilerId>groovy-eclipse-compiler</compilerId>-->
                     <verbose>true</verbose>
                     <fork>true</fork>
 
                 </configuration>
                 <dependencies>
-                    <dependency>
-                        <groupId>org.codehaus.groovy</groupId>
-                        <artifactId>groovy-eclipse-compiler</artifactId>
-                        <version>3.6.0-03</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.codehaus.groovy</groupId>
-                        <artifactId>groovy-eclipse-batch</artifactId>
-                        <version>2.5.8-03</version>
-                    </dependency>
+                    <!--<dependency>-->
+                        <!--<groupId>org.codehaus.groovy</groupId>-->
+                        <!--<artifactId>groovy-eclipse-compiler</artifactId>-->
+                        <!--<version>3.6.0-03</version>-->
+                    <!--</dependency>-->
+                    <!--<dependency>-->
+                        <!--<groupId>org.codehaus.groovy</groupId>-->
+                        <!--<artifactId>groovy-eclipse-batch</artifactId>-->
+                        <!--<version>2.5.8-03</version>-->
+                    <!--</dependency>-->
 
                 </dependencies>
             </plugin>
@@ -369,12 +331,12 @@
         <repository>
             <id>MyReleasesNexus</id>
             <name>Nexus Releases Repository</name>
-            <url>http://122.51.227.25:8081/repository/maven-releases/</url>
+            <url>http://nexus.akunlong.top:8081/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
             <id>MySnapshotNexus</id>
             <name>Nexus snapshots Repository</name>
-            <url>http://122.51.227.25:8081/repository/maven-snapshots/</url>
+            <url>http://nexus.akunlong.top:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 

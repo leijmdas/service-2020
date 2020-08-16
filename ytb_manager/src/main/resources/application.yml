@@ -1,0 +1,21 @@
+server:
+    tomcat:
+        uri-encoding: UTF-8
+        max-threads: 100
+        min-spare-threads: 25
+    port: 18000
+    servlet:
+        context-path: /
+management:
+    security:
+        enables: false
+    server:
+      port: 18001
+spring:
+    application:
+        name: manager
+    main:
+        allow-bean-definition-overriding: true
+    groovy:
+        template:
+            check-template-location: false

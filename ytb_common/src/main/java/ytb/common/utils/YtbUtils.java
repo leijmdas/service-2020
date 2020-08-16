@@ -3,8 +3,8 @@ package ytb.common.utils;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 
-import com.baidu.fsg.uid.impl.DefaultUidGenerator;
-import org.bson.types.ObjectId;
+//import com.baidu.fsg.uid.impl.DefaultUidGenerator;
+
 import org.springframework.http.ResponseEntity;
 import ytb.common.basic.config.service.ConfigCacheService;
 import ytb.common.context.service.impl.AppCtxtUtil;
@@ -32,7 +32,7 @@ public final class YtbUtils {
 
     public static String getObjectId() {
 
-        return new ObjectId().toString();
+        return "";//new ObjectId().toString();
     }
 
 //    public byte[] toByteArray(String v, int len) {
@@ -186,9 +186,9 @@ public final class YtbUtils {
     //flowsnakeGenerator
     public static long fsGetUID() {
 
-        DefaultUidGenerator uidGenerator = AppCtxtUtil.getApplicationContext()
-                .getBean("defaultUidGenerator", DefaultUidGenerator.class);
-        return uidGenerator.getUID();
+        //DefaultUidGenerator uidGenerator = AppCtxtUtil.getApplicationContext()
+        //        .getBean("defaultUidGenerator", DefaultUidGenerator.class);
+        return 1l;//uidGenerator.getUID();
     }
 }
 
